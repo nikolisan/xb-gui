@@ -87,10 +87,6 @@
 * Loading and editing on-the-fly storm sequences, water level conditions, input profile
 * Creating batch run sets *[WIP]*
 
-
-
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `nikolisan`, `xb-gui`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `GNU-GPL-v3`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
