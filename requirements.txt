@@ -1,0 +1,9 @@
+python==3.12.*
+pandas==2.2.3
+pyqtgraph==0.13.7
+rasterio==1.4.3
+pyqt5==5.15.11
+matplotlib==3.9.4
+contextily==1.6.2
+shapely==2.1.0
+geopandas==1.0.1
