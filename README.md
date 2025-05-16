@@ -30,13 +30,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/nikolisan/xb-gui">
-    <img src="images/xb-gui-logo-small.png" alt="Logo" width="80" height="80">
+    <img src="images/xb-gui-logo-small.png" alt="Logo" width="80" height="90">
   </a>
 
-  <h3 align="center">xb-gui</h3>
+  <h3 align="center"><b>xb-gui</b></h3>
 
   <p align="center">
-    a simple but effective way to create XBeach 2DV models
+    <i>a simple but effective way to create XBeach 2DV models</i>
     <br />
     <a href=""><strong>Explore the docs »</strong></a>
     <br />
