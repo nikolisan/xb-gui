@@ -86,6 +86,7 @@
 * Extracting cross-shore profiles from DEMs
 * Loading and editing on-the-fly storm sequences, water level conditions, input profile
 * Creating batch run sets *[WIP]*
+It was primarly created for creating models for the gravel variant of XBeach, XBeach-G.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
