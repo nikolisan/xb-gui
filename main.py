@@ -24,6 +24,7 @@ from PyQt5.QtWidgets import (QMainWindow, QApplication, QComboBox, QDialog, QDia
                              QVBoxLayout, QWidget, QTreeWidget, QTreeWidgetItem)
 
 from GUIPanels.InitialConditionsGUI import ICPanel
+from GUIPanels.emptyGUI import EmptyPanel
 from GUIPanels.ExtractFromRaster import ExtractRaster
 from GUIPanels.about_dialog import AboutDialog
 
@@ -35,13 +36,27 @@ class MainPanel(QWidget):
         self.stormgui = ICPanel('Input: Storm')
         self.water_level_gui = ICPanel('Input: Water Elevation')
 
+        self.grid_panel = EmptyPanel('Domain: Grid')
+        self.ne_panel = EmptyPanel('Domain: Non-erodible layer')
+        self.params_panel = EmptyPanel('Setup: Parameters')
+        self.outputs_panel = EmptyPanel('Output configuration')
+
+        self.analyse_panel = EmptyPanel('Model results: Analyse')
+
         self.raster_gui = ExtractRaster()
 
         self.stackLayout = QStackedLayout()
         self.stackLayout.addWidget(self.profile_gui) # -- id 1
         self.stackLayout.addWidget(self.stormgui) # -- id 2
         self.stackLayout.addWidget(self.water_level_gui) # -- id 3
-        self.stackLayout.addWidget(self.raster_gui) # -- id 4
+
+        self.stackLayout.addWidget(self.grid_panel) # -- id 4
+        self.stackLayout.addWidget(self.ne_panel) # -- id 5
+        self.stackLayout.addWidget(self.params_panel) # -- id 6
+        self.stackLayout.addWidget(self.outputs_panel) # -- id 7
+        self.stackLayout.addWidget(self.analyse_panel) # -- id 8
+
+        self.stackLayout.addWidget(self.raster_gui) # -- id 9
         self.setLayout(self.stackLayout)
 
         self.stackLayout.currentChanged.connect(parent.autoResize)
@@ -62,10 +77,11 @@ class MainWindow(QMainWindow):
         pages = {'Model Setup': {
                     'Inputs':['Profile_1', 'Storm_2', 'Water level_3'],
                     'Domain': ['Grid_4', 'Non-erodible layer_5'],
-                    'Output': ['Run model_6'],
+                    'Setup': ['Model parameters_6'],
+                    'Output': ['Output configuration_7'],
                     },
-                  'Model Results':['Analyse_100'],
-                  'Extra tools':['Extract from raster_4']
+                  'Model Results':['Analyse_8'],
+                  'Extra tools':['Extract from raster_9']
                 }
         
         file_menu = self.menu.addMenu('File')
